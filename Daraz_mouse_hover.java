@@ -44,8 +44,8 @@ public class Daraz_mouse_hover {
 			
 			//login with email and password
 			driver.findElement(By.xpath("//a[normalize-space()='login']")).click();
-			driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("bismalmajeed786@gmail.com");
-			driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/input[1]")).sendKeys("fc213449773");
+			driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys("enter your enail");
+			driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/input[1]")).sendKeys("pass ???");
 			driver.findElement(By.xpath("//button[@type='submit']")).click();	
 			
 			//click on Buy button
