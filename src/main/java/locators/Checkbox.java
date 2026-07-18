@@ -13,7 +13,8 @@ public class Checkbox {
 		driver.get("https://www.gmail.com/");
 		
 		
-		WebElement driver1 = driver1.findElement(By.xpath("//label[normalize-space()='Sports']"));
+		WebElement checkbox = driver.findElement(By.xpath("//label[normalize-space()='Sports']"));
+		checkbox.click();
 	}
 
 }

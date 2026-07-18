@@ -10,11 +10,11 @@ I needed a place to practice the fundamentals of Selenium in Java one concept at
 
 ## Approach
 
-Each script is a standalone class with its own `main()` method targeting a real site: the OrangeHRM demo app for locator and login practice, daraz.pk for mouse-hover navigation through nested menus, the-internet.herokuapp.com for dropdown handling, and Gmail for basic textbox and attribute checks. The `ReadWrite_Files` package reads login details out of a `.properties` file with `java.util.Properties` instead of hardcoding them. Not every script is finished — a couple are left mid-edit or have known bugs, which reflects the practice-as-I-go nature of this repo.
+Each script is a standalone class with its own `main()` method targeting a real site: the OrangeHRM demo app for locator and login practice, daraz.pk for mouse-hover navigation through nested menus, the-internet.herokuapp.com for dropdown handling, and Gmail for basic textbox and attribute checks. The `ReadWrite_Files` package reads login details out of a `.properties` file with `java.util.Properties` instead of hardcoding them. Not every script is a finished demo — `Radio.java` is still an empty stub, and `Daraz_Locators.java` intentionally documents a real "element not interactable" issue rather than hiding it, which reflects the practice-as-I-go nature of this repo. It's now set up as a proper Maven project (`pom.xml`, standard `src/main/java` layout) instead of loose files needing manual IDE classpath setup.
 
 ## Tech Stack
 
-- Java
+- Java 11, Maven
 - Selenium WebDriver
 - WebDriverManager (for automatic ChromeDriver setup)
 - Java Properties API for config/file-based test data

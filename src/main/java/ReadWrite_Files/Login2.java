@@ -1,6 +1,6 @@
 package ReadWrite_Files;
 
-import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -9,11 +9,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Login2 {
 
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
 
-	 FileInputStream fil = new FileInputStream("G:\\\\Selenium tranings\\\\WorkSpace\\\\Session14_1\\\\src\\\\test\\\\java\\\\ReadWrite_Files\\\\TestLogin.properties");
-	 Properties prop=new Properties();
-	 prop.load(fil);
+	 Properties prop = new Properties();
+	 try (InputStream in = Login2.class.getResourceAsStream("/TestLogin.properties")) {
+		 prop.load(in);
+	 }
 	 
 	 System.setProperty("webdriver.gecko.driver", "G:\\Katalon_Studio_Windows_64-8.1.0\\Katalon_Studio_Windows_64-8.1.0\\configuration\\resources\\drivers\\firefox_win64\\geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();

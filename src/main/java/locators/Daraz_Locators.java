@@ -1,6 +1,7 @@
 package locators;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Daraz_Locators {
@@ -17,8 +18,10 @@ public class Daraz_Locators {
 		
 		driver.findElement(By.id("react-select-2-input")).sendKeys("LHR");
 		
-		driver.findElement(By.id("//div[@class='sc-bdVaJa dJaiQv']//div[@class=' css-gwx3o5-control']")).
-			//Element not interactable exception occur due to dependency of one field input to the other field
+		// was previously By.id() with an XPath string passed in by mistake - id doesn't take an XPath
+		WebElement destinationInput = driver.findElement(By.cssSelector(".sc-bdVaJa.dJaiQv .css-gwx3o5-control"));
+		// Element not interactable exception occurs here since this field depends on the "from" field being filled first
+		destinationInput.click();
 	}
 
 }
