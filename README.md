@@ -63,3 +63,4 @@ mvn exec:java -Dexec.mainClass="locators.Button"
 ```
 
 Most of the `locators/` scripts and `Login2` still point `webdriver.gecko.driver` at a specific local path (`G:\Katalon_Studio_Windows_64-8.1.0\...\geckodriver.exe`) rather than using WebDriverManager — update that line to your own geckodriver path before running them, or swap it for `WebDriverManager.firefoxdriver().setup()` like `Daraz_mouse_hover.java` already does for Chrome.
+.
